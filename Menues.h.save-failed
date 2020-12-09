@@ -1,0 +1,153 @@
+#ifndef MENUES_H_INCLUDED
+#define MENUES_H_INCLUDED
+void menuProductos();
+void menuProveedores();
+
+void menuProductos(){
+    int opc;
+    Producto aux;
+    while(true){
+
+        rlutil::cls();
+        cout<<endl;
+        rlutil::locate(32,2);
+        cout<<"************************************************************"<<endl;rlutil::locate(32,3);
+        cout<<"************************************************************"<<endl;rlutil::locate(32,4);
+        cout<<"***                    MENU PRODUCTOS                    ***"<<endl;rlutil::locate(32,5);
+        cout<<"************************************************************"<<endl;rlutil::locate(32,6);
+        cout<<"************************************************************"<<endl;rlutil::locate(32,7);
+        cout<<"";rlutil::locate(32,8);
+        cout<<"***   1)  -----------   NUEVO PRODUCTO  ----------       ***"<<endl;rlutil::locate(32,9);
+        cout<<"***   2)  -----------  MODIFICAR PRECIO  ---------       ***"<<endl;rlutil::locate(32,10);
+        cout<<"***   3)  -----------  MODIFICAR STOCK  ----------       ***"<<endl;rlutil::locate(32,11);
+        cout<<"***   4)  -----------  MODIFICAR NOMBRE  ---------       ***"<<endl;rlutil::locate(32,12);
+        cout<<"***   5)  -----------  LISTAR PRODUCTOS  ---------       ***"<<endl;rlutil::locate(32,13);
+        cout<<"***   6)  -----------   LISTAR POR ID    ---------       ***"<<endl;rlutil::locate(32,14);
+        cout<<"";rlutil::locate(32,15);
+        cout<<"************************************************************"<<endl;rlutil::locate(32,16);
+        cout<<"***********************    0) SALIR    *********************"<<endl;rlutil::locate(32,17);
+        cout<<"************************************************************"<<endl;rlutil::locate(32,18);
+        cout<<"OPCION: ";cin>>opc;
+        ///system("cls");
+
+        switch(opc){
+    case 1:
+        rlutil::cls();
+        cin.ignore();
+        aux.cargarProducto();
+        if(aux.guardarProductoEnDisco()==true)cout<<"ARCHIVO AGREGADO"<<endl;
+        else cout<<"ERROR, PRODUCTO NO AGREGADO"<<endl;
+        rlutil::anykey();
+        break;
+    case 2:
+        rlutil::cls();
+
+        rlutil::anykey();
+        break;
+    case 3:
+        rlutil::cls();
+
+        rlutil::anykey();
+        break;
+    case 4:
+        rlutil::cls();
+        aux.modificarNombreProducto();
+        rlutil::anykey();
+        break;
+    case 5:
+        rlutil::cls();
+        aux.listarProductosID();
+        rlutil::anykey();
+        break;
+    case 6:
+        rlutil::cls();
+        aux.listarProductoXid();
+        rlutil::anykey();
+            break;
+    case 0:return;
+        break;
+    /**default:
+        rlutil::locate(52,18);
+        cout<<"OPCION INCORRECTA"<<endl;
+        cout<<endl<<endl<<endl<<endl<<endl;
+        system("pause");return;
+        rlutil::setColor(rlutil::WHITE);*/
+        }
+    }
+}
+
+
+void menuProveedores(){
+    Proveedor auxi;
+    int opc;
+    while(true){
+        rlutil::cls();
+        cout<<endl;
+        rlutil::locate(32,2);
+        cout<<"************************************************************"<<endl;rlutil::locate(32,3);
+        cout<<"************************************************************"<<endl;rlutil::locate(32,4);
+        cout<<"***                   MENU PROVEEDORES                   ***"<<endl;rlutil::locate(32,5);
+        cout<<"************************************************************"<<endl;rlutil::locate(32,6);
+        cout<<"************************************************************"<<endl;rlutil::locate(32,7);
+        cout<<"";rlutil::locate(32,8);
+        cout<<"***   1)  ----------  AGREGAR PROVEEDOR  ---------       ***"<<endl;rlutil::locate(32,9);
+        cout<<"***   2)  -----------  MODIFICAR NOMBRE  ---------       ***"<<endl;rlutil::locate(32,10);
+        cout<<"***   3)  -----------  ----------------  ---------       ***"<<endl;rlutil::locate(32,11);
+        cout<<"***   4)  -----------  ----------------  ---------       ***"<<endl;rlutil::locate(32,12);
+        cout<<"***   5)  ----------- LISTAR PROVEEDORES ---------       ***"<<endl;rlutil::locate(32,13);
+        cout<<"***   6)  -----------   LISTAR POR ID    ---------       ***"<<endl;rlutil::locate(32,14);
+        cout<<"";rlutil::locate(32,15);
+        cout<<"************************************************************"<<endl;rlutil::locate(32,16);
+        cout<<"***********************    0) SALIR    *********************"<<endl;rlutil::locate(32,17);
+        cout<<"************************************************************"<<endl;rlutil::locate(32,18);
+        cout<<"OPCION: ";cin>>opc;
+        ///system("cls");
+        switch(opc){
+    case 1:
+        rlutil::cls();
+        cin.ignore();
+        auxi.cargarProveedor();
+        if(auxi.guardarProveedorEnDisco()==true)cout<<"PROVEEDOR AGREGADO"<<endl;
+        else cout<<"ERROR, PROVEEDOR NO AGREGADO"<<endl;
+        rlutil::anykey();
+        break;
+    case 2:
+        rlutil::cls();
+
+        rlutil::anykey();
+        break;
+    case 3:
+        rlutil::cls();
+
+        rlutil::anykey();
+        break;
+    case 4:
+        rlutil::cls();
+
+        rlutil::anykey();
+        break;
+    case 5:
+        rlutil::cls();
+
+        rlutil::anykey();
+        break;
+    case 6:
+        rlutil::cls();
+
+        rlutil::anykey();
+            break;
+    case 0:return;
+        break;
+    default:
+        rlutil::locate(52,18);
+        cout<<"OPCION INCORRECTA"<<endl;
+        cout<<endl<<endl<<endl<<endl<<endl;
+        system("pause");
+        rlutil::setColor(rlutil::WHITE);
+        }
+    }
+}
+
+
+
+#endif // MENUES_H_INCLUDED
