@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1607602359 source:c:\users\user\dropbox\programacion_utn2020\lab2_2c\poo\pruebafinal\main.cpp
+1607615590 source:c:\users\user\dropbox\programacion_utn2020\lab2_2c\poo\pruebafinal\main.cpp
 	<iostream>
 	<cstdio>
 	<cstdlib>
@@ -24,11 +24,11 @@
 
 1607606115 c:\users\user\dropbox\programacion_utn2020\lab2_2c\poo\pruebafinal\producto.h
 
-1606667526 c:\users\user\dropbox\programacion_utn2020\lab2_2c\poo\pruebafinal\detalleventa.h
+1607616014 c:\users\user\dropbox\programacion_utn2020\lab2_2c\poo\pruebafinal\detalleventa.h
 
 1606577501 c:\users\user\dropbox\programacion_utn2020\lab2_2c\poo\pruebafinal\fecha.h
 
-1607603806 c:\users\user\dropbox\programacion_utn2020\lab2_2c\poo\pruebafinal\venta.h
+1607617152 c:\users\user\dropbox\programacion_utn2020\lab2_2c\poo\pruebafinal\venta.h
 
 1606076633 c:\users\user\dropbox\programacion_utn2020\lab2_2c\poo\pruebafinal\funciones.h
 
@@ -48,7 +48,7 @@
 
 1607607423 c:\users\user\dropbox\programacion_utn2020\lab2_2c\poo\pruebafinal\proveedor.h
 
-1607537650 c:\users\user\dropbox\programacion_utn2020\lab2_2c\poo\pruebafinal\menues.h
+1607609699 c:\users\user\dropbox\programacion_utn2020\lab2_2c\poo\pruebafinal\menues.h
 
 1607606068 c:\users\user\dropbox\programacion_utn2020\lab2_2c\poo\pruebafinal\funcmenuproductos.h
 
@@ -58,7 +58,7 @@
 
 1606324886 c:\users\user\dropbox\programacion_utn2020\lab2_2c\poo\pruebafinal\funcmenuvendedor.h
 
-1607603434 c:\users\user\dropbox\programacion_utn2020\lab2_2c\poo\pruebafinal\funcmenuventa.h
+1607616014 c:\users\user\dropbox\programacion_utn2020\lab2_2c\poo\pruebafinal\funcmenuventa.h
 
 1607608521 c:\users\user\dropbox\programacion_utn2020\lab2_2c\poo\pruebafinal\cliente.h
 

@@ -21,8 +21,8 @@ using namespace std;
 #include "FuncMenuVenta.h"
 #include "FuncMenuCliente.h"
 #include "FuncMenuProveedor.h"
-int contadorVentas();
-void nuevaVenta();
+//int contadorVentas();
+//void nuevaVenta();
 
 
 ///EXTRA PARA COMPROBAR EL FUNCIONAMIENTO DE LA FUNCION "CONTAR"
@@ -39,6 +39,26 @@ return cont;
 
 int main()
 {
+    /*
+    Venta Aux;
+
+    cout<<contadorVentas();
+    Aux.leerVentaEnDisco(0);
+    Aux.setCodigo_Venta(1);
+    Aux.guardarVentaEnDisco(0);
+    */
+/*
+    DetalleVenta Reg;
+    Reg.cargar();
+    Reg.guardarEnDisco();
+    Reg.listarDetallesVenta();
+*/
+    /*
+    Reg.leerDetalleVentaEnDisco(0);
+    Reg.setCodigo_Venta_DV(1);
+    Reg.guardarEnDisco(0);
+    */
+
     rlutil::setBackgroundColor(rlutil::BLUE);
     rlutil::setColor(rlutil::WHITE);
     int opc;
@@ -110,6 +130,7 @@ int main()
         }
         system("pause");
     }
+
     return 0;
 }
 
@@ -180,14 +201,14 @@ void menuEmpleados(){
         rlutil::locate(32,2);
         cout<<"*************************************************************"<<endl;rlutil::locate(32,3);
         cout<<"*************************************************************"<<endl;rlutil::locate(32,4);
-        cout<<"***                       VENDEDORES                      ***"<<endl;rlutil::locate(32,5);
+        cout<<"***                     MENU EMPLEADOS                    ***"<<endl;rlutil::locate(32,5);
         cout<<"*************************************************************"<<endl;rlutil::locate(32,6);
         cout<<"*************************************************************"<<endl;rlutil::locate(32,7);
         cout<<"";rlutil::locate(32,8);
         cout<<"***   1)  -----------   NUEVO VENDEDOR   -----------      ***"<<endl;rlutil::locate(32,9);
         cout<<"***   2)  -----------  ELIMINAR VENDEDOR -----------      ***"<<endl;rlutil::locate(32,10);
-        cout<<"***   --  -----------  ----------------  -----------      ***"<<endl;rlutil::locate(32,11);
-        cout<<"***   --  -----------  ----------------  -----------      ***"<<endl;rlutil::locate(32,12);
+        //cout<<"***   --  -----------  ----------------  -----------      ***"<<endl;rlutil::locate(32,11);
+        //cout<<"***   --  -----------  ----------------  -----------      ***"<<endl;rlutil::locate(32,12);
         cout<<"***   3)  -----------  LISTAR VENDEDORES -----------      ***"<<endl;rlutil::locate(32,13);
         cout<<"***   4)  -----------   LISTAR POR ID    -----------      ***"<<endl;rlutil::locate(32,14);
         cout<<"";rlutil::locate(32,15);

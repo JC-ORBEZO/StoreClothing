@@ -9,7 +9,7 @@ cout<<"INGRESE CODIGO DE VENTA: ";
 cin>>idVenta;
 int pos=0;
 FILE *p;
-p=fopen("VentasRT.dat","rb");
+p=fopen("VentasNEW.dat","rb");
 if(p==NULL)return -1;
 while(fread(&Aux,sizeof(Venta),1,p)){
     if(Aux.getCodigo_Venta()==idVenta){
@@ -29,10 +29,10 @@ int posicionDetalleVenta(int idVenta){
     cin.ignore();
 int pos=0;
 FILE *p;
-p=fopen("DetalleVentaRT.dat","rb");
+p=fopen("DetalleVentaNEW.dat","rb");
 if(p==NULL)return -1;
 while(fread(&Aux,sizeof(DetalleVenta),1,p)){
-    if(Aux.getCodigo_Venta()==idVenta){
+    if(Aux.getCodigo_VentaDV()==idVenta){
         fclose(p);
         return pos;
     }else{
@@ -47,7 +47,7 @@ return -2;
 int contadorVentas(){
 int cont=0;
 FILE *p;
-p=fopen("VentasRT.dat","rb");
+p=fopen("VentasNEW.dat","rb");
 
 fseek(p,0,SEEK_END);
 cont=ftell(p);
@@ -60,7 +60,7 @@ return cont;
 int contadorDetalleVenta(){
 int cont=0;
 FILE *p;
-p=fopen("DetalleVentaRT.dat","rb");
+p=fopen("DetalleVentaNEW.dat","rb");
 
 fseek(p,0,SEEK_END);
 cont=ftell(p);
@@ -78,6 +78,7 @@ void nuevaVenta(){
     Cliente Cli;
     struct Fechini prueba;
     Proba.cargarVenta();
+    ///VERIFICAR QUE EL VENDEDOR ESTÉ REGISTRADO
     int cont=Rap.buscarPosicion(Proba.getCodigoVendedor_Venta());
     if(cont<0){
         cout<<endl;
@@ -86,7 +87,7 @@ void nuevaVenta(){
     }
     ///VERIFICAR QUE CLIENTE ESTÉ CORRECTAMENTE REGISTRADO
     int contador=Cli.buscarPosicion(Proba.getDni_Cliente_Venta());
-    cout<<contador<<endl;
+    //cout<<contador<<endl;
     if(contador<0){
         cout<<endl;
         cout<<"CLIENTE NO REGISTRADO, VUELVA A INTENTARLO"<<endl;
@@ -163,14 +164,14 @@ if(Aux.getActivo()==false){
 
 cout<<endl;
 FILE *p;
-p=fopen("DetalleVentaRT.dat","rb+");
+p=fopen("DetalleVentaNEW.dat","rb+");
 if(p==NULL){
     return;
 }
 cout<<"DETALLE: "<<endl;
 cout<<endl;
 while(fread(&Reg,sizeof(DetalleVenta),1,p)){
-    if(Aux.getCodigo_Venta()==Reg.getCodigo_Venta()){
+    if(Aux.getCodigo_Venta()==Reg.getCodigo_VentaDV()){
         if(Reg.getActivo()==true){
           Reg.mostrar();
         }
@@ -196,14 +197,14 @@ if(Reg.getActivo()==false){
 
 ///         ///
 FILE *p;
-p=fopen("DetalleVentaRT.dat","rb+");
+p=fopen("DetalleVentaNEW.dat","rb+");
 if(p==NULL){
     return;
 }
 //cout<<"DETALLE: "<<endl;
 //cout<<endl;
 while(fread(&Proba,sizeof(DetalleVenta),1,p)){
-/**AHORA*/    if(Proba.getCodigo_Venta()==Reg.getCodigo_Venta()){
+/**AHORA*/    if(Proba.getCodigo_VentaDV()==Reg.getCodigo_Venta()){
         int pos=Aux.buscarPosicion(Proba.getCodigoProducto_DV());
         Aux.leerProductoEnDisco(pos);
         Aux.AumentarStock(Proba.getCantidad_DV());
@@ -232,7 +233,7 @@ char dni[20];
 cout<<"INGRESE DNI CLIENTE: ";
 cin.getline(dni,20,'\n');
 FILE *p;
-p=fopen("VentasRt.dat","rb");
+p=fopen("VentasNEW.dat","rb");
 if(p==NULL){
     cout<<"ERROR, NO SE PUDO ABRIR EL ARCHIVO VENTAS"<<endl;
     return;
@@ -276,7 +277,7 @@ Venta Aux;
 ///cin>>ani;
 float Vec[12]={0};
 FILE *p;
-p=fopen("VentasRT.dat","rb");
+p=fopen("VentasNEW.dat","rb");
 if(p==NULL)return;
 while(fread(&Aux,sizeof(Venta),1,p)){
     ///if(ani=Aux.getFecha_Venta().getAnio()){

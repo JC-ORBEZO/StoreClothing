@@ -68,7 +68,7 @@ public:
     bool Venta::leerVentaEnDisco(int posicion){
     bool leyo;
     FILE *p;
-    p=fopen("VentasRT.dat","rb+");
+    p=fopen("VentasNEW.dat","rb+");
     if(p==NULL){
         return false;
     }
@@ -80,7 +80,7 @@ public:
 
     void Venta::listarVentas(){
     FILE *p;
-    p=fopen("VentasRT.dat","rb");
+    p=fopen("VentasNEW.dat","rb");
 
     if(p==NULL){
     cout<<"ERROR EN EL ARCHIVO"<<endl;
@@ -88,9 +88,7 @@ public:
     }
     while(fread(this ,sizeof (Venta), 1,p)){
     mostrarVenta();
-    cin.ignore();
     cout<<endl;
-
     }
     fclose(p);
     return;
@@ -99,7 +97,6 @@ public:
 
     void Venta::cargarVenta(){
     activo=false;
-    cin.ignore();
     //cout<<"CODIGO DE VENTA:           ";///TIENE QUE SER UN AUTONUMERICO
     //cin.getline(codigo_Venta,20,'\n');
     cout<<"DNI VENDEDOR:              ";
@@ -122,24 +119,25 @@ public:
     }
 
     void Venta::mostrarVenta(){
-    ///if(activo==true){
+    if(activo==true){
+    cin.ignore();
     cout<<"CODIGO DE VENTA:      "<<codigo_Venta<<endl;
     cout<<"VENDEDOR       :      "<<codigoVendedor_Venta<<endl;
     cout<<"DNI CLIENTE    :      "<<dni_Cliente_Venta<<endl;
     fecha_Venta.mostrarFecha();///FALTA COMPLETAR
     cout<<"INGRESO TOTAL  :      "<<totalIngreso_Venta<<endl;
     ///cout<<"BOOL: "<<activo<<endl;
-    ///}
+    }
     }
 
     bool Venta::guardarVentaEnDisco(int posicion){
     FILE *p;
     bool grabo;
     if(posicion== -1){
-        p=fopen("VentasRT.dat","ab");                       ///AHORA
+        p=fopen("VentasNEW.dat","ab");                       ///AHORA
         if(p==NULL)return false;
     }else{
-        p=fopen("VentasRT.dat","rb+");
+        p=fopen("VentasNEW.dat","rb+");
         if(p==NULL) return false;
         else fseek(p,posicion*sizeof (Venta),0);
     }

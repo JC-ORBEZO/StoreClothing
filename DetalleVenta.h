@@ -13,6 +13,18 @@ public:
     void cargar();
     void mostrar();
     bool guardarEnDisco(int = -1);
+    bool leerDetalleVentaEnDisco(int posicion){
+    bool leyo;
+    FILE *p;
+    p=fopen("DetalleVentaNEW","rb+");
+    if(p==NULL){
+        return false;
+    }
+    fseek(p,posicion*sizeof(DetalleVenta),0);
+    leyo=fread(this,sizeof (DetalleVenta),1,p);
+    fclose(p);
+    return leyo;
+    }
     void listarDetallesVenta();
 
     ///setts
@@ -23,7 +35,7 @@ public:
     activo=a;
     };
     ///getts
-    int getCodigo_Venta(){
+    int getCodigo_VentaDV(){
     return codigo_Venta_DV;
     }
     float getPrecioVenta_DV(){
@@ -47,20 +59,20 @@ public:
     void DetalleVenta::cargar(){
     activo=false;
     //cout<<"CODIGO DE VENTA :     ";
-    //cin.getline(codigo_Venta_DV,20,'\n');
+    //cin>>codigo_Venta_DV;
     cin.ignore();
     cout<<"CODIGO PRODUCTO :     ";
     cin.getline(codigoProducto_DV,20,'\n');
     cout<<"CANTIDAD        :     ";
     cin>>cantidad_DV;
-    ///cout<<"PRECIO DE VENTA :     ";
-    ///cin>>precioVenta_DV;
+    //cout<<"PRECIO DE VENTA :     ";
+    //cin>>precioVenta_DV;
     activo=true;
     }
 
     void DetalleVenta::mostrar(){
     if(activo==true){
-    cout<<"CODIGO DE VENTA :     "<<codigo_Venta_DV<<endl;
+    //cout<<"CODIGO DE VENTA :     "<<codigo_Venta_DV<<endl;
     cout<<"CODIGO PRODUCTO :     "<<codigoProducto_DV<<endl;
     cout<<"CANTIDAD        :     "<<cantidad_DV<<endl;
     cout<<"PRECIO DE VENTA :     "<<precioVenta_DV<<endl;
@@ -72,10 +84,10 @@ public:
     FILE *p;
 
     if(posicion== -1){
-       p=fopen("DetalleVentaRT.dat","ab");                              ///AHORA
+       p=fopen("DetalleVentaNEW.dat","ab");
        if(p==NULL)return false;
     }else{
-        p=fopen("DetalleVentaRT.dat","ab+");
+        p=fopen("DetalleVentaNEW.dat","rb+");
        if(p==NULL)return false;
        else fseek(p,posicion*sizeof (DetalleVenta),0);
     }
@@ -87,7 +99,7 @@ public:
     ///LISTAR DETALLES DE VENTA
     void DetalleVenta::listarDetallesVenta(){
     FILE *p;
-    p=fopen("DetalleVentaRT.dat","rb");
+    p=fopen("DetalleVentaNEW.dat","rb");
 
     if(p==NULL){
     cout<<"ERROR EN EL ARCHIVO"<<endl;
