@@ -5,7 +5,7 @@ void menuProductos();///
 void menuProveedores();///
 void menuEmpleados();///
 void menuClientes();///
-void menuVentas();
+void menuVentas();///
 
 ///
 
