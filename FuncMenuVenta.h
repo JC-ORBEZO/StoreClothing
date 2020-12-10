@@ -250,6 +250,7 @@ fclose(p);
 
 ///PUNTO 5
 
+
 ///PUNTO 6: LISTAR INGRESOS POR MES
 void nombreDeMes(char mes[12][30]){
 strcpy(mes[0],"  ENERO      :  $ ");

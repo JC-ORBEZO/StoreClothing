@@ -30,7 +30,7 @@ public:
 ///LISTAR PRODUCTOS
     void Proveedor::listarProveedoresID(){
     FILE *p;
-    p=fopen("Proveedores.dat","rb");
+    p=fopen("ProveedoresNEW.dat","rb");
 
     if(p==NULL){
     cout<<"ERROR EN EL ARCHIVO"<<endl;
@@ -48,7 +48,7 @@ public:
     int Proveedor::buscarPosicion(const char *codProv){
     int pos=0;
     FILE *p;
-    p=fopen("Proveedores.dat","rb+");
+    p=fopen("ProveedoresNEW.dat","rb+");
     if(p==NULL){
     cout<<"NO SE PUDO ABRIR EL ARCHIVO"<<endl;
     return -1;
@@ -93,10 +93,10 @@ bool Proveedor::guardarProveedorEnDisco(int posicion){
 FILE *p;
 bool grabo;
 if(posicion==-1){
-    p=fopen("Proveedores.dat","ab");
+    p=fopen("ProveedoresNEW.dat","ab");
     if(p==NULL) return false;
 }else{
-    p=fopen("Proveedores.dat","rb+");
+    p=fopen("ProveedoresNEW.dat","rb+");
     if(p==NULL) return false;
     else fseek(p,posicion*sizeof (Proveedor),0);
 }

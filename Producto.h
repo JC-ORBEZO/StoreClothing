@@ -85,7 +85,7 @@ public:
     ///LISTAR PRODUCTOS
     void Producto::listarProductosID(){
     FILE *p;
-    p=fopen("ProductosRT.dat","rb");
+    p=fopen("ProductosNEW.dat","rb");
 
     if(p==NULL){
     cout<<"ERROR EN EL ARCHIVO"<<endl;
@@ -102,7 +102,7 @@ public:
     void listarProductosID(){
     Producto Reg;
     FILE *p;
-    p=fopen("ProductosRT.dat","rb");
+    p=fopen("ProductosNEW.dat","rb");
     if(p==NULL){
     cout<<"ERROR EN EL ARCHIVO"<<endl;
     return;
@@ -190,12 +190,12 @@ public:
     bool grabo;
     FILE *p;
     if(posicion== -1){
-        p=fopen("ProductosRT.dat","ab");
+        p=fopen("ProductosNEW.dat","ab");    ///AHORA
         if(p==NULL){
         return false;
         }
     }else{
-        p=fopen("ProductosRT.dat","rb+");
+        p=fopen("ProductosNEW.dat","rb+");
         if(p==NULL){
         return false;
         }
@@ -232,7 +232,7 @@ public:
     bool Producto::leerProductoEnDisco(int posicion){
     bool leyo;
     FILE *p;
-    p=fopen("ProductosRT.dat","rb+");
+    p=fopen("ProductosNEW.dat","rb+");
     if(p==NULL){
         return false;
     }
@@ -246,7 +246,7 @@ public:
     int Producto::buscarPosicion(const char *codProd){
     int pos=0;
     FILE *p;
-    p=fopen("ProductosRT.dat","rb+");
+    p=fopen("ProductosNEW.dat","rb+");
     if(p==NULL){
     cout<<"NO SE PUDO ABRIR EL ARCHIVO"<<endl;
     return -1;
@@ -266,7 +266,7 @@ public:
     int Producto::buscarPosicion2(char *codProd){
     int pos=0;
     FILE *p;
-    p=fopen("ProductosRT.dat","rb");
+    p=fopen("ProductosNEW.dat","rb");
     if(p==NULL){
     cout<<"NO SE PUDO ABRIR EL ARCHIVO"<<endl;
     return -1;

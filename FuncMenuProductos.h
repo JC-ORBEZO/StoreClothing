@@ -17,16 +17,20 @@ for (int i=1;i<=cantidad ;i++ ){
     int posicion;
     posicion=Proba.buscarPosicion(Aux.getCodProveedor_P());
     while(posicion<0){
+        cout<<endl;
         cout<<"CODIGO DE PROVEEDOR NO EXISTE, VUELVA A INTENTARLO"<<endl;
-        char cadena[20];
-        cout<<"CODIGO PROVEEDOR: ";
-        cin.getline(cadena,20,'\n');
-        Aux.setCodProveedor_P(cadena);
+        cout<<endl;
+        //char cadena[20];
+        //cout<<"CODIGO PROVEEDOR: ";
+        //cin.getline(cadena,20,'\n');
+        Aux.cargarProducto();
+        //Aux.setCodProveedor_P(cadena);
         posicion=Proba.buscarPosicion(Aux.getCodProveedor_P());
     }
         if(Aux.guardarProductoEnDisco()==true)cout<<"ARCHIVO AGREGADO"<<endl;
-        else cout<<"ERROR, PRODUCTO NO AGREGADO"<<endl;
+        else{cout<<"ERROR, PRODUCTO NO AGREGADO"<<endl;
         cout<<endl;
+        }
 }
 }
 

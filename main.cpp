@@ -39,7 +39,6 @@ return cont;
 
 int main()
 {
-    cout<<"PRUEBA PARA GIT"<<endl;
     rlutil::setBackgroundColor(rlutil::BLUE);
     rlutil::setColor(rlutil::WHITE);
     int opc;
@@ -58,8 +57,8 @@ int main()
         cout<<"***   3)  ------------      VENTAS     ------------       ***"<<endl;rlutil::locate(32,11);
         cout<<"***   4)  -----------    PROVEEDORES    -----------       ***"<<endl;rlutil::locate(32,12);
         cout<<"***   5)  -----------      CLIENTES     -----------       ***"<<endl;rlutil::locate(32,13);
-        cout<<"***   6)  -----------      REPORTES     -----------       ***"<<endl;rlutil::locate(32,14);
-        cout<<"***   7)  -----------   CONFIGURACION   -----------       ***"<<endl;rlutil::locate(32,15);
+        ///cout<<"***   6)  -----------      REPORTES     -----------       ***"<<endl;rlutil::locate(32,14);
+        ///cout<<"***   7)  -----------   CONFIGURACION   -----------       ***"<<endl;rlutil::locate(32,15);
         cout<<""<<endl;rlutil::locate(32,16);
         cout<<"*************************************************************"<<endl;rlutil::locate(32,17);
         cout<<"**********************    0) SALIR     **********************"<<endl;rlutil::locate(32,18);
@@ -279,7 +278,7 @@ void menuVentas(){
         cout<<"OPCION INCORRECTA"<<endl;
         rlutil::setColor(rlutil::WHITE);
         }
-    ///system("pause");
+    system("pause");
     }
 }
 

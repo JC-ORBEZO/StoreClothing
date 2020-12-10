@@ -88,7 +88,9 @@ public:
     }
     while(fread(this ,sizeof (Venta), 1,p)){
     mostrarVenta();
+    cin.ignore();
     cout<<endl;
+
     }
     fclose(p);
     return;
