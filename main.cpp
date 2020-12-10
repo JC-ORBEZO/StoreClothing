@@ -295,8 +295,8 @@ void menuClientes(){
         cout<<"*************************************************************"<<endl;rlutil::locate(32,7);
         cout<<"";rlutil::locate(32,8);
         cout<<"***   1)  -----------    NUEVO CLIENTE   -----------      ***"<<endl;rlutil::locate(32,9);
-        cout<<"***   2)  -----------   MOSTRAR CLIENTE  -----------      ***"<<endl;rlutil::locate(32,10);
-        cout<<"***   3)  -----------   LISTAR CLIENTES -----------       ***"<<endl;rlutil::locate(32,11);
+        cout<<"***   2)  --------   MOSTRAR CLIENTE X DNI  --------      ***"<<endl;rlutil::locate(32,10);
+        cout<<"***   3)  -----------   LISTAR CLIENTES  -----------      ***"<<endl;rlutil::locate(32,11);
         cout<<"";rlutil::locate(32,12);
         cout<<"*************************************************************"<<endl;rlutil::locate(32,13);
         cout<<"***********************    0) SALIR    **********************"<<endl;rlutil::locate(32,14);

@@ -81,11 +81,12 @@ activoProveedor=true;
 
 void Proveedor::mostrarProveedor(){
 if(activoProveedor==true){
+cin.ignore();
 cout<<"CODIGO PROVEEDOR:   "<<cod_Proveedor<<endl;
 cout<<"NOMBRE PROVEEDOR:   "<<nombre_Proveedor<<endl;
 cout<<"TELEFONO:           "<<telefono_Proveedor<<endl;
 cout<<"DIRECCION:          "<<direccion_Proveedor<<endl;
-cout<<activoProveedor<<endl;
+//cout<<activoProveedor<<endl;
 }
 }
 

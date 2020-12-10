@@ -39,6 +39,7 @@ public:
 
     void Cliente::mostrarCliente(){
     if(activo==true){
+            cin.ignore();
     cout<<"DNI CLIENTE:        "<<dni_Cliente<<endl;
     cout<<"NOMBRE Y APELLIDO:  "<<nombre_Cliente<<endl;
     cout<<"CORREO:             "<<correo_Cliente<<endl;
@@ -50,10 +51,10 @@ public:
     FILE *p;
     bool grabo;
     if(posicion==-1){
-        p=fopen("ClientesRT.dat","ab");
+        p=fopen("ClientesNEW.dat","ab");
         if(p==NULL) return false;
     }else{
-        p=fopen("ClientesRT.dat","rb+");
+        p=fopen("ClientesNEW.dat","rb+");
         if(p==NULL) return false;
         else fseek(p,posicion*sizeof (Cliente),0);
     }
@@ -66,7 +67,7 @@ public:
     bool Cliente::leerClienteEnDisco(int posicion){
     bool leyo;
     FILE *p;
-    p=fopen("ClientesRT.dat","rb");
+    p=fopen("ClientesNEW.dat","rb");
     if(p==NULL){
         return false;
     }
@@ -83,7 +84,7 @@ public:
     //cout<<"INGRESE DNI CLIENTE: ";
     //cin.getline(dni,30,'\n');
     FILE *p;
-    p=fopen("ClientesRT.dat","rb");
+    p=fopen("ClientesNEW.dat","rb");
     if(p==NULL){
         cout<<"NO SE PUDO ABRIR EL ARCHIVO"<<endl;
         return -1;
@@ -106,7 +107,7 @@ public:
     //cout<<"INGRESE DNI CLIENTE: ";
     //cin.getline(dni,30,'\n');
     FILE *p;
-    p=fopen("ClientesRT.dat","rb");
+    p=fopen("ClientesNEW.dat","rb");
     if(p==NULL){
         cout<<"NO SE PUDO ABRIR EL ARCHIVO"<<endl;
         return -1;

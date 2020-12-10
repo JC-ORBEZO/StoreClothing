@@ -12,7 +12,7 @@ char dni[30];
 cin.ignore();
 cout<<"INGRESAR DNI CLIENTE: ";
 cin.getline(dni,30,'\n');
-p=fopen("ClientesRT.dat","rb");
+p=fopen("ClientesNEW.dat","rb");
 if(p==NULL){
     cout<<"NO SE PUDO ABRIR EL ARCHIVO"<<endl;
     return;
@@ -35,7 +35,7 @@ void listarClientes(){
 cout<<"LISTA GENERAL DE CLIENTES"<<endl;
 Cliente Aux;
 FILE *p;
-p=fopen("ClientesRT.dat","rb");
+p=fopen("ClientesNEW.dat","rb");
 if(p==NULL){
     cout<<"NO SE PUDO ABRIR EL ARCHIVO"<<endl;
     return;
