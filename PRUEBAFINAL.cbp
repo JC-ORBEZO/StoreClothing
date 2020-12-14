@@ -38,6 +38,7 @@
 		<Unit filename="FuncMenuCliente.h" />
 		<Unit filename="FuncMenuProductos.h" />
 		<Unit filename="FuncMenuProveedor.h" />
+		<Unit filename="FuncMenuReportes.h" />
 		<Unit filename="FuncMenuVendedor.h" />
 		<Unit filename="FuncMenuVenta.h" />
 		<Unit filename="Funciones.h" />

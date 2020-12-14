@@ -15,15 +15,16 @@ using namespace std;
 #include "Fecha.h"
 #include "Venta.h"
 #include "Proveedor.h"
-#include "Menues.h"
+
 #include "FuncMenuProductos.h"
 #include "FuncMenuVendedor.h"
 #include "FuncMenuVenta.h"
 #include "FuncMenuCliente.h"
 #include "FuncMenuProveedor.h"
+#include "FuncMenuReportes.h"
+#include "Menues.h"
 //int contadorVentas();
 //void nuevaVenta();
-
 
 ///EXTRA PARA COMPROBAR EL FUNCIONAMIENTO DE LA FUNCION "CONTAR"
 int contadorProductos(){
@@ -62,13 +63,130 @@ int main()
     rlutil::setBackgroundColor(rlutil::BLUE);
     rlutil::setColor(rlutil::WHITE);
     int opc;
+    while(true){
+     system("cls");
+        cout<<endl;
+        rlutil::locate(32,2);
+        cout<<"*************************************************************"<<endl;rlutil::locate(32,3);
+        cout<<"*************************************************************"<<endl;rlutil::locate(32,4);
+        cout<<"***                ACCESO - CLOTHING STORE                ***"<<endl;rlutil::locate(32,5);
+        cout<<"*************************************************************"<<endl;rlutil::locate(32,6);
+        cout<<"*************************************************************"<<endl;rlutil::locate(32,7);
+        cout<<"";rlutil::locate(32,8);
+        cout<<"***   1)  -----------     VENDEDORES    -----------       ***"<<endl;rlutil::locate(32,9);
+        cout<<"***   2)  -----------   ADMINISTRADOR   -----------       ***"<<endl;rlutil::locate(32,10);
+        cout<<""<<endl;rlutil::locate(32,11);
+        cout<<"*************************************************************"<<endl;rlutil::locate(32,12);
+        cout<<"**********************    0) SALIR     **********************"<<endl;rlutil::locate(32,13);
+        cout<<"*************************************************************"<<endl;rlutil::locate(32,14);
+        cout<<"OPCION:";cin>>opc;
+        system("cls");
+        switch(opc){
+    case 1:
+        rlutil::cls();
+        menuAccesoEmpleados();
+        //AccesoEmpleados();
+        rlutil::anykey();
+        break;
+    case 2:
+        rlutil::cls();
+        menuAccesoAdminnistrador();
+        rlutil::anykey();
+        break;
+    case 0:return 0;
+        break;
+    default:
+        rlutil::locate(52,2);
+        cout<<"OPCION INCORRECTA"<<endl;
+        rlutil::setColor(rlutil::WHITE);
+        }
+        //system("pause");
+    }
+    return 0;
+}
+
+void menuAccesoAdminnistrador(){
+        int opc;
         while(true){
         system("cls");
         cout<<endl;
         rlutil::locate(32,2);
         cout<<"*************************************************************"<<endl;rlutil::locate(32,3);
         cout<<"*************************************************************"<<endl;rlutil::locate(32,4);
-        cout<<"***                    CLOTHING STORE                     ***"<<endl;rlutil::locate(32,5);
+        cout<<"***            CLOTHING STORE - ADMINISTRADOR             ***"<<endl;rlutil::locate(32,5);
+        cout<<"*************************************************************"<<endl;rlutil::locate(32,6);
+        cout<<"*************************************************************"<<endl;rlutil::locate(32,7);
+        cout<<"";rlutil::locate(32,8);
+        cout<<"***   1)  -----------     PRODUCTOS     -----------       ***"<<endl;rlutil::locate(32,9);
+        cout<<"***   2)  -----------     EMPLEADOS     -----------       ***"<<endl;rlutil::locate(32,10);
+        cout<<"***   3)  ------------      VENTAS      -----------       ***"<<endl;rlutil::locate(32,11);
+        cout<<"***   4)  -----------    PROVEEDORES    -----------       ***"<<endl;rlutil::locate(32,12);
+        cout<<"***   5)  -----------      CLIENTES     -----------       ***"<<endl;rlutil::locate(32,13);
+        cout<<"***   6)  -----------      REPORTES     -----------       ***"<<endl;rlutil::locate(32,14);
+        ///cout<<"***   7)  -----------   CONFIGURACION   -----------       ***"<<endl;rlutil::locate(32,15);
+        cout<<""<<endl;rlutil::locate(32,16);
+        cout<<"*************************************************************"<<endl;rlutil::locate(32,17);
+        cout<<"**********************    0) SALIR     **********************"<<endl;rlutil::locate(32,18);
+        cout<<"*************************************************************"<<endl;rlutil::locate(32,19);
+        cout<<"OPCION:";cin>>opc;
+        system("cls");
+        switch(opc){
+    case 1:
+        rlutil::cls();
+        menuProductos();
+        rlutil::anykey();
+        break;
+    case 2:
+        rlutil::cls();
+        menuEmpleados();
+        rlutil::anykey();
+        break;
+    case 3:
+        rlutil::cls();
+        menuVentas();
+        rlutil::anykey();
+        break;
+    case 4:
+        rlutil::cls();
+        menuProveedores();
+        rlutil::anykey();
+        break;
+    case 5:
+        rlutil::cls();
+        menuClientes();
+        rlutil::anykey();
+        break;
+    case 6:
+        rlutil::cls();
+        menuReportes();
+        rlutil::anykey();
+        break;
+    case 7:
+        rlutil::cls();
+        ///menuConfiguracion();
+        rlutil::anykey();
+        break;
+    case 0:return;
+        break;
+    default:
+        rlutil::locate(52,2);
+        cout<<"OPCION INCORRECTA"<<endl;
+        rlutil::setColor(rlutil::WHITE);
+        }
+        //system("pause");
+    }
+    }
+
+
+    void menuAccesoEmpleadosAux(){
+        int opc;
+        while(true){
+        system("cls");
+        cout<<endl;
+        rlutil::locate(32,2);
+        cout<<"*************************************************************"<<endl;rlutil::locate(32,3);
+        cout<<"*************************************************************"<<endl;rlutil::locate(32,4);
+        cout<<"***              CLOTHING STORE - VENDEDORES              ***"<<endl;rlutil::locate(32,5);
         cout<<"*************************************************************"<<endl;rlutil::locate(32,6);
         cout<<"*************************************************************"<<endl;rlutil::locate(32,7);
         cout<<"";rlutil::locate(32,8);
@@ -121,18 +239,17 @@ int main()
         ///menuConfiguracion();
         rlutil::anykey();
         break;
-    case 0:return 0;
+    case 0:return;
         break;
     default:
         rlutil::locate(52,2);
         cout<<"OPCION INCORRECTA"<<endl;
         rlutil::setColor(rlutil::WHITE);
         }
-        system("pause");
+        //system("pause");
+    }
     }
 
-    return 0;
-}
 
 void menuProductos(){
     int opc;
@@ -147,10 +264,10 @@ void menuProductos(){
         cout<<"************************************************************"<<endl;rlutil::locate(32,7);
         cout<<"";rlutil::locate(32,8);
         cout<<"***   1)  -----------   NUEVO PRODUCTO   -----------     ***"<<endl;rlutil::locate(32,9);
-        cout<<"***   2)  -----------  MODIFICAR PRECIOS -----------     ***"<<endl;rlutil::locate(32,10);
-        cout<<"***   3)  -----------   MODIFICAR STOCK  -----------     ***"<<endl;rlutil::locate(32,11);
+        cout<<"***   2)  -----------  MODIFICAR PRECIO  -----------     ***"<<endl;rlutil::locate(32,10);
+        cout<<"***   3)  -----------   AUMENTAR STOCK   -----------     ***"<<endl;rlutil::locate(32,11);
         cout<<"***   4)  -----------  LISTAR PRODUCTOS  -----------     ***"<<endl;rlutil::locate(32,12);
-        cout<<"***   5)  -----------    LISTAR POR ID   -----------     ***"<<endl;rlutil::locate(32,13);
+        cout<<"***   5)  ---------  MOSTRAR PRODUCTO X ID ---------     ***"<<endl;rlutil::locate(32,13);
         cout<<"";rlutil::locate(32,14);
         cout<<"************************************************************"<<endl;rlutil::locate(32,15);
         cout<<"***********************    0) SALIR    *********************"<<endl;rlutil::locate(32,16);
@@ -263,11 +380,11 @@ void menuVentas(){
         cout<<"***   3)  ------------  ELIMINAR VENTA  -------------    ***"<<endl;rlutil::locate(32,11);
         cout<<"***   4)  ------  LISTAR VENTA POR DNI CLIENTE  -----    ***"<<endl;rlutil::locate(32,12);
         cout<<"***   5)  ------------    LISTAR VENTAS   -----------    ***"<<endl;rlutil::locate(32,13);
-        cout<<"***   6)  ------   LISTAR INGRESOS POR MES    -------    ***"<<endl;rlutil::locate(32,14);
-        cout<<"";rlutil::locate(32,15);
-        cout<<"************************************************************"<<endl;rlutil::locate(32,16);
-        cout<<"***********************    0) SALIR    *********************"<<endl;rlutil::locate(32,17);
-        cout<<"************************************************************"<<endl;rlutil::locate(32,18);
+        ///cout<<"***   6)  ------   LISTAR INGRESOS POR MES    -------    ***"<<endl;rlutil::locate(32,14);
+        cout<<"";rlutil::locate(32,14);
+        cout<<"************************************************************"<<endl;rlutil::locate(32,15);
+        cout<<"***********************    0) SALIR    *********************"<<endl;rlutil::locate(32,16);
+        cout<<"************************************************************"<<endl;rlutil::locate(32,17);
         cout<<"OPCION: ";cin>>opc;
         system("cls");
         switch(opc){
@@ -426,17 +543,16 @@ void menuReportes(){
         system("cls");
         switch(opc){
     case 1:
-        cargarProveedor();
+        ingresoPorMes();
         break;
     case 2:
-        eliminarProveedorPorID();
+        listarIngresosAnuales();
         break;
     case 3:
-        {Proveedor proba;
-        proba.listarProveedoresID();}
+
         break;
     case 4:
-        mostrarProveedorPorID();
+        listarProductosSinStock();
         break;
     case 0:return;
         break;

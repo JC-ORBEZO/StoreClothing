@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1607615590 source:c:\users\user\dropbox\programacion_utn2020\lab2_2c\poo\pruebafinal\main.cpp
+1607957387 source:c:\users\user\dropbox\programacion_utn2020\lab2_2c\poo\pruebafinal\main.cpp
 	<iostream>
 	<cstdio>
 	<cstdlib>
@@ -15,12 +15,13 @@
 	"Fecha.h"
 	"Venta.h"
 	"Proveedor.h"
-	"Menues.h"
 	"FuncMenuProductos.h"
 	"FuncMenuVendedor.h"
 	"FuncMenuVenta.h"
 	"FuncMenuCliente.h"
 	"FuncMenuProveedor.h"
+	"FuncMenuReportes.h"
+	"Menues.h"
 
 1607606115 c:\users\user\dropbox\programacion_utn2020\lab2_2c\poo\pruebafinal\producto.h
 
@@ -48,21 +49,23 @@
 
 1607607423 c:\users\user\dropbox\programacion_utn2020\lab2_2c\poo\pruebafinal\proveedor.h
 
-1607609699 c:\users\user\dropbox\programacion_utn2020\lab2_2c\poo\pruebafinal\menues.h
+1607954269 c:\users\user\dropbox\programacion_utn2020\lab2_2c\poo\pruebafinal\menues.h
 
 1607606068 c:\users\user\dropbox\programacion_utn2020\lab2_2c\poo\pruebafinal\funcmenuproductos.h
 
-1606147210 c:\users\user\dropbox\programacion_utn2020\lab2_2c\poo\pruebafinal\prototipos.h
+1607896435 c:\users\user\dropbox\programacion_utn2020\lab2_2c\poo\pruebafinal\prototipos.h
 
-1607538004 c:\users\user\dropbox\programacion_utn2020\lab2_2c\poo\pruebafinal\vendedor.h
+1607894070 c:\users\user\dropbox\programacion_utn2020\lab2_2c\poo\pruebafinal\vendedor.h
 
-1606324886 c:\users\user\dropbox\programacion_utn2020\lab2_2c\poo\pruebafinal\funcmenuvendedor.h
+1607874338 c:\users\user\dropbox\programacion_utn2020\lab2_2c\poo\pruebafinal\funcmenuvendedor.h
 
-1607616014 c:\users\user\dropbox\programacion_utn2020\lab2_2c\poo\pruebafinal\funcmenuventa.h
+1607955019 c:\users\user\dropbox\programacion_utn2020\lab2_2c\poo\pruebafinal\funcmenuventa.h
 
 1607608521 c:\users\user\dropbox\programacion_utn2020\lab2_2c\poo\pruebafinal\cliente.h
 
 1607607846 c:\users\user\dropbox\programacion_utn2020\lab2_2c\poo\pruebafinal\funcmenucliente.h
 
 1607604231 c:\users\user\dropbox\programacion_utn2020\lab2_2c\poo\pruebafinal\funcmenuproveedor.h
+
+1607957502 c:\users\user\dropbox\programacion_utn2020\lab2_2c\poo\pruebafinal\funcmenureportes.h
 

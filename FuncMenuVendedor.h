@@ -22,7 +22,7 @@ cout<<"INGRESE DNI EMPLEADO: ";
 cin.getline(DNIEmpleado,20,'\n');
 int pos=0;
 FILE *p;
-p=fopen("VendedoresRT.dat","rb");
+p=fopen("VendedoresNEW.dat","rb");
 if(p==NULL)return -1;
 while(fread(&Aux,sizeof(Vendedor),1,p)){
     if(strcmp(Aux.getCodigo_Vendedor(),DNIEmpleado)==0){
@@ -68,7 +68,7 @@ cout<<"LISTA DE VENDEDORES: "<<endl;
 cout<<endl;
 Vendedor Aux;
 FILE *p;
-p=fopen("VendedoresRT.dat","rb");
+p=fopen("VendedoresNEW.dat","rb");
 if(p==NULL){
     cout<<"NO SE PUDO ABRIR ARCHIVO"<<endl;
     return;
@@ -98,7 +98,6 @@ if(pos<0){
 Aux.leerVendedorEnDisco(pos);
 Aux.mostrarVendedor();
 }
-
 }
 
 
