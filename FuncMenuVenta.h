@@ -77,6 +77,7 @@ void nuevaVenta(){
     Vendedor Rap;
     Cliente Cli;
     struct Fechini prueba;
+    cin.ignore();///AHORA
     Proba.cargarVenta();
     ///VERIFICAR QUE EL VENDEDOR ESTÉ REGISTRADO
     int cont=Rap.buscarPosicion(Proba.getCodigoVendedor_Venta());

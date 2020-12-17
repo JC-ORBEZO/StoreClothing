@@ -8,7 +8,7 @@ private:
     char codigoVendedor_Venta[20];
     char dni_Cliente_Venta[20];
     Fecha fecha_Venta;
-    int cantidad_Ventas;        /// EXTRA PARA ACOPLAR DETALLE VENTAS  "DUDOSO"
+    int cantidad_Ventas;        /// EXTRA PARA ACOPLAR CANTIDAD DE DETALLES DE VENTA
     DetalleVenta DetaVenta;   /// EXTRA PARA ACOPLAR DETALLE VENTAS
     float totalIngreso_Venta;
     bool activo;

@@ -549,7 +549,7 @@ void menuReportes(){
         listarIngresosAnuales();
         break;
     case 3:
-
+        listarVentaXid();
         break;
     case 4:
         listarProductosSinStock();

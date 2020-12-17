@@ -6,37 +6,30 @@ void menuAccesoEmpleados();
 void menuAccesoAdminnistrador();
 
 
-
-void menuAccesoEmpleadosAux();
-void menuProductos();///
-void menuProveedores();///
-void menuEmpleados();///
-void menuClientes();///
-void menuVentas();///
-
-///MENÚES EMPLEADOS
-void menuProductosEmpleados();///
-void menuProveedoresEmpleados();///
-void menuEmpleadosEmpleados();///
-void menuClientesEmpleados();///
-void menuVentasEmpleados();///
-
-
 ///MENÚES ADMINISTRADOR
-void menuProductosAdministrador();///
-void menuProveedoresAdministrador();///
-void menuEmpleadosAdministrador();///
-void menuClientesAdministrador();///
-void menuVentasAdministrador();///
-
-
-
-///
-
-void menuReportes();     /// PENDIENTE
+void menuAccesoEmpleadosAux();
+void menuProductos();
+void menuProveedores();
+void menuEmpleados();
+void menuClientes();
+void menuVentas();
+void menuReportes();
 void menuConfiguracion(); /// PENDIENTE
 
+///MENÚES EMPLEADOS
+void menuProductosEmpleados();
+void menuProveedoresEmpleados();
+void menuEmpleadosEmpleados();
+void menuClientesEmpleados();
+void menuVentasEmpleados();
 
+
+
+//void menuProductosAdministrador();///
+//void menuProveedoresAdministrador();///
+//void menuEmpleadosAdministrador();///
+//void menuClientesAdministrador();///
+//void menuVentasAdministrador();///
 
 
 void menuAccesoEmpleados(){
