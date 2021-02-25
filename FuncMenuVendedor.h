@@ -1,5 +1,7 @@
 #ifndef FUNCMENUVENDEDOR_H_INCLUDED
 #define FUNCMENUVENDEDOR_H_INCLUDED
+
+#include "Vendedor.h"
 ///EVALUA SI TIENE POSICION VALIDA EN EL ARCHIVO
 void evaluaFuncionPosicion(int pos){
 if(pos== -1){
@@ -73,10 +75,14 @@ if(p==NULL){
     cout<<"NO SE PUDO ABRIR ARCHIVO"<<endl;
     return;
 }
+cout<<" CODIGO VENDEDOR      "<<"   NOMBRE       "<<"    DNI "<<endl;
+cout<<"----------------------------------------------"<<endl;
+int b=5;
 while(fread(&Aux,sizeof (Vendedor),1,p)){
-    Aux.mostrarVendedor();
-    cout<<endl;
+    Aux.mostrarVendedor2(b);
+    b++;
 }
+cout<<endl<<endl<<endl;
 fclose(p);
 }
 
@@ -96,7 +102,9 @@ if(pos<0){
     evaluaFuncionPosicion(pos);
 }else{
 Aux.leerVendedorEnDisco(pos);
-Aux.mostrarVendedor();
+cout<<" CODIGO VENDEDOR      "<<"   NOMBRE       "<<"    DNI "<<endl;
+cout<<"----------------------------------------------"<<endl;
+Aux.mostrarVendedor2(7);
 }
 }
 

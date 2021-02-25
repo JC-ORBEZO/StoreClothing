@@ -65,6 +65,7 @@ if(a==0){
 
 ///PUNTO 4: BUSCAR POR PROVEEDOR POR ID
 void mostrarProveedorPorID(){
+int b=6;
 cout<<"BUSCAR PROVEEDOR: "<<endl;
 cout<<endl;
 Proveedor Aux;
@@ -77,10 +78,13 @@ cout<<"ID PROVEEDOR: ";
 cin.getline(proveedor,20,'\n');
 if(p==NULL)cout<<"NO SE PUDO ABRIR EL ARCHIVO"<<endl;
 else{
+    cout<<" CODIGO PROVEEDOR  "<<"  NOMBRE PROVEEDOR  "<<"      TELEFONO      "<<"    DIRECCION   "<<endl;
+    cout<<"-----------------------------------------------------------------------------"<<endl;
     while(fread(&Aux,sizeof (Proveedor),1,p)){
     if(strcmp(Aux.getCod_Proveedor(),proveedor)==0){
-    cout<<endl;
-    Aux.mostrarProveedor();
+    //cout<<endl;
+    Aux.mostrarProveedor2(b);
+    b++;
     a++;
     }
   }

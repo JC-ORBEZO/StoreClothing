@@ -9,6 +9,7 @@ private:
 public:
     void cargarFecha();
     void mostrarFecha();
+    void mostrarFecha2();
 
     ///setts
     void setDia(int d){dia=d;};
@@ -21,15 +22,5 @@ public:
     int getAnio(){return anio;};
 };
 
-void Fecha::cargarFecha(){
-    cout<<"FECHA: "<<endl;
-    cin>>dia;
-    cin>>mes;
-    cin>>anio;
-}
-
-void Fecha::mostrarFecha(){
-    cout<<"FECHA          :      "<<dia<<"/"<<mes<<"/"<<anio<<endl;
-}
 
 #endif // FECHA_H_INCLUDED

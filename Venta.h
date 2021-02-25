@@ -1,6 +1,8 @@
 #ifndef VENTA_H_INCLUDED
 #define VENTA_H_INCLUDED
-
+#include "Fecha.h"
+#include "DetalleVenta.h"
+#include "Funciones.h"
 ///CLASE VENTAS
 class Venta{
 private:
@@ -15,9 +17,9 @@ private:
 public:
     void cargarVenta();
     void mostrarVenta();
+    void mostrarVenta2(int );
     bool guardarVentaEnDisco(int = -1);
     void listarVentas();
-
     ///setter
     void setActivo(bool a){
     activo=a;
@@ -28,7 +30,6 @@ public:
     void setCodigoVendedor_Venta(char *c);
     void setDni_Cliente_Venta(char *);
     void setFecha_Venta(Fecha f){/**fecha_Venta=f;*/};
-
 
 
     void setFecha_Venta(Fechini prueba){
@@ -64,87 +65,7 @@ public:
     bool leerVentaEnDisco(int);
 };
 
-    ///LEER EN DISCO
-    bool Venta::leerVentaEnDisco(int posicion){
-    bool leyo;
-    FILE *p;
-    p=fopen("VentasNEW.dat","rb+");
-    if(p==NULL){
-        return false;
-    }
-    fseek(p,posicion*sizeof(Venta),0);
-    leyo=fread(this,sizeof (Venta),1,p);
-    fclose(p);
-    return leyo;
-    }
 
-    void Venta::listarVentas(){
-    FILE *p;
-    p=fopen("VentasNEW.dat","rb");
-
-    if(p==NULL){
-    cout<<"ERROR EN EL ARCHIVO"<<endl;
-    return;
-    }
-    while(fread(this ,sizeof (Venta), 1,p)){
-    mostrarVenta();
-    cout<<endl;
-    }
-    fclose(p);
-    return;
-    }
-
-
-    void Venta::cargarVenta(){
-    activo=false;
-    //cout<<"CODIGO DE VENTA:           ";///TIENE QUE SER UN AUTONUMERICO
-    //cin.getline(codigo_Venta,20,'\n');
-    cout<<"DNI VENDEDOR:              ";
-    cin.getline(codigoVendedor_Venta,20,'\n');
-    cout<<"DNI CLIENTE:               ";
-    cin.getline(dni_Cliente_Venta,20,'\n');
-    //fecha_Venta.cargarFecha();
-    cout<<"NUMERO DE TIPOS DE PRENDA: ";
-    cin>>cantidad_Ventas;
-    /*for (int i=1;i<= cantidad_Ventas;i++ ){
-        system("cls");
-        cin.ignore();
-        DetaVenta.cargar();
-        DetaVenta.guardarEnDisco();
-    }*/
-
-    ///cout<<"INGRESO TOTAL:             ";
-    ///cin>>totalIngreso_Venta;
-    activo=true;
-    }
-
-    void Venta::mostrarVenta(){
-    if(activo==true){
-    cin.ignore();
-    cout<<"CODIGO DE VENTA:      "<<codigo_Venta<<endl;
-    cout<<"VENDEDOR       :      "<<codigoVendedor_Venta<<endl;
-    cout<<"DNI CLIENTE    :      "<<dni_Cliente_Venta<<endl;
-    fecha_Venta.mostrarFecha();///FALTA COMPLETAR
-    cout<<"INGRESO TOTAL  :      "<<totalIngreso_Venta<<endl;
-    ///cout<<"BOOL: "<<activo<<endl;
-    }
-    }
-
-    bool Venta::guardarVentaEnDisco(int posicion){
-    FILE *p;
-    bool grabo;
-    if(posicion== -1){
-        p=fopen("VentasNEW.dat","ab");                       ///AHORA
-        if(p==NULL)return false;
-    }else{
-        p=fopen("VentasNEW.dat","rb+");
-        if(p==NULL) return false;
-        else fseek(p,posicion*sizeof (Venta),0);
-    }
-    grabo=fwrite(this,sizeof (Venta),1,p);
-    fclose(p);
-    return grabo;
-    }
 
 
 #endif // VENTA_H_INCLUDED

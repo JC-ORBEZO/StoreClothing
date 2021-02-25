@@ -28,7 +28,7 @@ FILE *p;
 p=fopen("VentasNEW.dat","rb");
 if(p==NULL)return;
 while(fread(&Aux,sizeof(Venta),1,p)){
-    if(ani==Aux.getFecha_Venta().getAnio()){
+    if(ani==Aux.getFecha_Venta().getAnio()  && Aux.getActivo()==true){
        Vec[Aux.getFecha_Venta().getMes()-1]+=Aux.getTotalIngreso_Venta();
     }
 }
@@ -50,7 +50,7 @@ cin>>an;
 int pos=0;
 float acum=0;
 while(Aux.leerVentaEnDisco(pos++)){
-    if(Aux.getFecha_Venta().getAnio()==an){
+    if(Aux.getFecha_Venta().getAnio()==an  && Aux.getActivo()==true){
         acum+=Aux.getTotalIngreso_Venta();
     }
 }

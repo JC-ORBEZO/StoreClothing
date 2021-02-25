@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1607957387 source:c:\users\user\dropbox\programacion_utn2020\lab2_2c\poo\pruebafinal\main.cpp
+1608216881 source:c:\users\user\dropbox\programacion_utn2020\lab2_2c\poo\pruebafinal\main.cpp
 	<iostream>
 	<cstdio>
 	<cstdlib>
@@ -68,4 +68,161 @@
 1607604231 c:\users\user\dropbox\programacion_utn2020\lab2_2c\poo\pruebafinal\funcmenuproveedor.h
 
 1607957502 c:\users\user\dropbox\programacion_utn2020\lab2_2c\poo\pruebafinal\funcmenureportes.h
+
+1613849422 source:c:\users\user\dropbox\progutn2020\lab2_2c\poo\pruebafinal\main.cpp
+	<iostream>
+	<cstdio>
+	<cstdlib>
+	<cstring>
+	<ctime>
+	"rlutil_c.h"
+	"Producto.h"
+	"Menues.h"
+
+1571584339 c:\users\user\dropbox\progutn2020\lab2_2c\poo\pruebafinal\rlutil_c.h
+	<iostream>
+	<string>
+	<cstdio>
+	<stdio.h>
+	<string.h>
+	<windows.h>
+	<conio.h>
+	<termios.h>
+	<unistd.h>
+	<sys/ioctl.h>
+	<sys/types.h>
+	<sys/time.h>
+
+1607896435 c:\users\user\dropbox\progutn2020\lab2_2c\poo\pruebafinal\prototipos.h
+
+1613744914 c:\users\user\dropbox\progutn2020\lab2_2c\poo\pruebafinal\funciones.h
+
+1613756935 c:\users\user\dropbox\progutn2020\lab2_2c\poo\pruebafinal\producto.h
+
+1613771091 c:\users\user\dropbox\progutn2020\lab2_2c\poo\pruebafinal\vendedor.h
+
+1613834444 c:\users\user\dropbox\progutn2020\lab2_2c\poo\pruebafinal\cliente.h
+
+1613831127 c:\users\user\dropbox\progutn2020\lab2_2c\poo\pruebafinal\detalleventa.h
+
+1613830447 c:\users\user\dropbox\progutn2020\lab2_2c\poo\pruebafinal\fecha.h
+
+1614003819 c:\users\user\dropbox\progutn2020\lab2_2c\poo\pruebafinal\venta.h
+	"Fecha.h"
+	"DetalleVenta.h"
+	"Funciones.h"
+
+1613832428 c:\users\user\dropbox\progutn2020\lab2_2c\poo\pruebafinal\proveedor.h
+
+1614094564 c:\users\user\dropbox\progutn2020\lab2_2c\poo\pruebafinal\funcmenuproductos.h
+	"Prototipos.h"
+
+1613850039 c:\users\user\dropbox\progutn2020\lab2_2c\poo\pruebafinal\funcmenuvendedor.h
+	"Vendedor.h"
+
+1614004337 c:\users\user\dropbox\progutn2020\lab2_2c\poo\pruebafinal\funcmenuventa.h
+
+1613835552 c:\users\user\dropbox\progutn2020\lab2_2c\poo\pruebafinal\funcmenucliente.h
+
+1613833935 c:\users\user\dropbox\progutn2020\lab2_2c\poo\pruebafinal\funcmenuproveedor.h
+
+1614106884 c:\users\user\dropbox\progutn2020\lab2_2c\poo\pruebafinal\funcmenureportes.h
+
+1613752684 c:\users\user\dropbox\progutn2020\lab2_2c\poo\pruebafinal\menues.h
+
+1613834898 source:c:\users\user\dropbox\progutn2020\lab2_2c\poo\pruebafinal\cliente.cpp
+	<iostream>
+	<cstdio>
+	<cstdlib>
+	<cstring>
+	<ctime>
+	"rlutil_c.h"
+	"Cliente.h"
+
+1613831660 source:c:\users\user\dropbox\progutn2020\lab2_2c\poo\pruebafinal\detalleventa.cpp
+	<iostream>
+	<cstdio>
+	<cstdlib>
+	<cstring>
+	<ctime>
+	"rlutil_c.h"
+	"DetalleVenta.h"
+
+1613830288 source:c:\users\user\dropbox\progutn2020\lab2_2c\poo\pruebafinal\fecha.cpp
+	<iostream>
+	<cstdio>
+	<cstdlib>
+	<cstring>
+	<ctime>
+	"rlutil_c.h"
+	"Fecha.h"
+
+1614092648 source:c:\users\user\dropbox\progutn2020\lab2_2c\poo\pruebafinal\producto.cpp
+	<iostream>
+	<cstdio>
+	<cstdlib>
+	<cstring>
+	<ctime>
+	"rlutil_c.h"
+	"Producto.h"
+
+1613827116 source:c:\users\user\dropbox\progutn2020\lab2_2c\poo\pruebafinal\menues.cpp
+	<iostream>
+	<cstdio>
+	<cstdlib>
+	<cstring>
+	<ctime>
+	"rlutil_c.h"
+	"Menues.h"
+	"Producto.h"
+	"Prototipos.h"
+	"Prototipos.h"
+	"Vendedor.h"
+	"Cliente.h"
+	"DetalleVenta.h"
+	"Fecha.h"
+	"Venta.h"
+	"Proveedor.h"
+	"FuncMenuProductos.h"
+	"FuncMenuVendedor.h"
+	"FuncMenuVenta.h"
+	"FuncMenuCliente.h"
+	"FuncMenuProveedor.h"
+	"FuncMenuReportes.h"
+
+1614096644 source:c:\users\user\dropbox\progutn2020\lab2_2c\poo\pruebafinal\vendedor.cpp
+	<iostream>
+	<cstdio>
+	<cstdlib>
+	<cstring>
+	<ctime>
+	"rlutil_c.h"
+	"Vendedor.h"
+
+1613830333 source:c:\users\user\dropbox\progutn2020\lab2_2c\poo\pruebafinal\venta.cpp
+	<iostream>
+	<cstdio>
+	<cstdlib>
+	<cstring>
+	<ctime>
+	"rlutil_c.h"
+	"Venta.h"
+
+1613744951 source:c:\users\user\dropbox\progutn2020\lab2_2c\poo\pruebafinal\funciones.cpp
+	<iostream>
+	<cstdio>
+	<cstdlib>
+	<cstring>
+	<ctime>
+	"rlutil_c.h"
+	"Funciones.h"
+
+1614205782 source:c:\users\user\dropbox\progutn2020\lab2_2c\poo\pruebafinal\proveedor.cpp
+	<iostream>
+	<cstdio>
+	<cstdlib>
+	<cstring>
+	<ctime>
+	"rlutil_c.h"
+	"Proveedor.h"
 

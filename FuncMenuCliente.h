@@ -17,10 +17,14 @@ if(p==NULL){
     cout<<"NO SE PUDO ABRIR EL ARCHIVO"<<endl;
     return;
 }
+cout<<endl;
+cout<<"   DNI CLIENTE     "<<"     NOMBRE Y APELLIDO     "<<"     EMAIL     "<<"     TELEFONO     "<<endl;
+cout<<"-----------------------------------------------------------------------------------"<<endl;
 while(fread(&Aux,sizeof (Cliente),1,p)){
     if(strcmp(Aux.getDni_Cliente(),dni)==0){
-        cout<<endl;
-        Aux.mostrarCliente();
+
+        Aux.mostrarCliente2(6);
+        cout<<endl<<endl<<endl;
         return;
     }
 }
@@ -32,6 +36,7 @@ return;
 
 ///PUNTO 3: LISTAR TODOS LOS CLIENTES
 void listarClientes(){
+int b=4;
 cout<<"LISTA GENERAL DE CLIENTES"<<endl;
 Cliente Aux;
 FILE *p;
@@ -40,10 +45,14 @@ if(p==NULL){
     cout<<"NO SE PUDO ABRIR EL ARCHIVO"<<endl;
     return;
 }
+cout<<"   DNI CLIENTE     "<<"     NOMBRE Y APELLIDO     "<<"     EMAIL     "<<"     TELEFONO     "<<endl;
+cout<<"---------------------------------------------------------------------------------"<<endl;
 while(fread(&Aux,sizeof (Cliente),1,p)){
         cout<<endl;
-        Aux.mostrarCliente();
+        Aux.mostrarCliente2(b);
+        b++;
 }
+cout<<endl<<endl<<endl;
 fclose(p);
 }
 

@@ -1,9 +1,10 @@
 #ifndef FUNCMENUPRODUCTOS_H_INCLUDED
 #define FUNCMENUPRODUCTOS_H_INCLUDED
-
+#include "Prototipos.h"
 ///IMPLEMENTACION DE FUNCIONES
 
 ///PUNTO 1: CARGAR PRODUCTO: PUEDE CARGAR LA CANTIDAD QUE SE NECESITE
+
 void cargarProducto(){
 int cantidad;
 Producto Aux;
@@ -94,17 +95,24 @@ void modificarStockProducto(){
 
 /// PUNTO 5: LISTAR PRODUCTO SEGÚN SU CODIGO PRODUCTO
 void ListarProductoXid(){
+cout<<"LISTAR PRODUCTO POR ID "<<endl;
 Producto Aux;
-
 char cadeneta[20];
+cin.ignore();
 cout<<"INGRESE EL CODIGO DE PRODUCTO:  ";
 cin.getline(cadeneta,20,'\n');
 int posicion;
 posicion=Aux.buscarPosicion2(cadeneta);
-if(posicion<0)cout<<"EL CODIGO PRODUCTO INGRESADO NO EXISTE"<<endl;
-else{
+if(posicion<0){
+    cout<<endl;
+    cout<<"EL CODIGO PRODUCTO INGRESADO NO EXISTE"<<endl;
+}else{
     if(Aux.leerProductoEnDisco(posicion)==true){
-        Aux.mostrarProducto();
+cout<<endl;
+cout<<" COD PRODUCTO"<<"    NOMBRE PRODUCTO "<<"   COD PROVEEDOR"<<"   PRECIO VENTA"<<"   PRECIO COMPRA"<<"   STOCK"<<"   TALLE"<<endl;
+cout<<" -------------------------------------------------------------------------------------------------"<<endl;
+
+Aux.mostrarProducto2(7);
 }else{
         cout<<"ERROR"<<endl;
 }

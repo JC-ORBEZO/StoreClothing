@@ -7,12 +7,36 @@ int posicionVenta(){
 int idVenta;
 cout<<"INGRESE CODIGO DE VENTA: ";
 cin>>idVenta;
+cout<<endl;
 int pos=0;
 FILE *p;
 p=fopen("VentasNEW.dat","rb");
 if(p==NULL)return -1;
 while(fread(&Aux,sizeof(Venta),1,p)){
     if(Aux.getCodigo_Venta()==idVenta){
+        fclose(p);
+        return pos;
+    }else{
+    pos++;
+    }
+}
+fclose(p);
+return -2;
+}
+
+int buscarPosVentaPorDniCliente(const char *dni){
+Venta Aux;
+    cin.ignore();
+//int idVenta;
+//cout<<"INGRESE CODIGO DE VENTA: ";
+//cin>>idVenta;
+cout<<endl;
+int pos=0;
+FILE *p;
+p=fopen("VentasNEW.dat","rb");
+if(p==NULL)return -1;
+while(fread(&Aux,sizeof(Venta),1,p)){
+    if(strcmp(Aux.getDni_Cliente_Venta(),dni)==0){
         fclose(p);
         return pos;
     }else{
@@ -152,16 +176,19 @@ void listarVentaXid(){
 int pos;
 pos=posicionVenta();
 if(pos<0){
-    cout<<"INGRESO INCORRECTO"<<endl;
+    cout<<"EL ID INGRESADO NO EXISTE"<<endl;
+    return;
 }
 Aux.leerVentaEnDisco(pos);
 if(Aux.getActivo()==false){
     cout<<"VENTA YA DADA DE BAJA"<<endl;
     return;
 }
-///if(Aux.getActivo()==true){
-   Aux.mostrarVenta();
-///}
+cout<<" CODIGO DE VENTA  "<<"  VENDEDOR "<<"  DNI CLIENTE "<<"     FECHA  "<<"    INGRESO TOTAL   "<<endl;
+cout<<"-------------------------------------------------------------------------"<<endl;
+if(Aux.getActivo()==true){
+   Aux.mostrarVenta2(7);
+}
 
 cout<<endl;
 FILE *p;
@@ -171,15 +198,19 @@ if(p==NULL){
 }
 cout<<"DETALLE: "<<endl;
 cout<<endl;
+cout<<"  CODIGO PRODUCTO  "<<" CANTIDAD "<<" PRECIO DE VENTA "<<endl;
+cout<<"----------------------------------------------"<<endl;
+int b=13;
 while(fread(&Reg,sizeof(DetalleVenta),1,p)){
     if(Aux.getCodigo_Venta()==Reg.getCodigo_VentaDV()){
         if(Reg.getActivo()==true){
-          Reg.mostrar();
+          Reg.mostrar2(b);
+          b++;
         }
 
     }
 }
-
+cout<<endl<<endl<<endl;
 }
 
 ///PUNTO 3 ELIMINAR VENTA
@@ -227,9 +258,10 @@ Reg.guardarVentaEnDisco(posicion);
 //4.
 
 void listarVentaPorDni(){
+int b=8;
 Venta Aux;
 cin.ignore();
-cout<<"LISTAR DNI POR CLIENTE"<<endl;
+cout<<"LISTAR VENTA POR DNI CLIENTE"<<endl;
 char dni[20];
 cout<<"INGRESE DNI CLIENTE: ";
 cin.getline(dni,20,'\n');
@@ -239,13 +271,23 @@ if(p==NULL){
     cout<<"ERROR, NO SE PUDO ABRIR EL ARCHIVO VENTAS"<<endl;
     return;
 }
+if(buscarPosVentaPorDniCliente(dni)<0){
+cout<<"DNI CLIENTE NO REGISTRADO"<<endl;
+return;
+}
+
+cout<<endl;
+cout<<" CODIGO DE VENTA  "<<"  VENDEDOR "<<"  DNI CLIENTE "<<"     FECHA  "<<"    INGRESO TOTAL   "<<endl;
+cout<<"-------------------------------------------------------------------------"<<endl;
 while(fread(&Aux,sizeof(Venta),1,p)){
     ///Aux.mostrarVenta();
     if(strcmp(Aux.getDni_Cliente_Venta(),dni)==0){
         cout<<endl;
-        Aux.mostrarVenta();
+        Aux.mostrarVenta2(b);
+        b++;
     }
 }
+cout<<endl<<endl<<endl;
 fclose(p);
 }
 
