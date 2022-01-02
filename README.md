@@ -7,3 +7,5 @@ El sistema de gestión de tienda de ropa “CLOTHING STORE”, cuenta con 6 arch
 Este sistema consideró las siguientes características de una tienda de ropas: 
 El vendedor: debe contar con un código de acceso para evitar manipulación indebida de la información, el mismo que deberá ingresar cada vez que quiera hacer una venta.
 Ropa: Cada prenda disponible en la tienda cuenta con un etiquetado que muestra tanto el código de proveedor, como el código de ropa. Información que al realizar una venta deberá ser ingresada correctamente, pues de lo contrario el sistema no reconocerá la existencia del producto, haciendo imposible la realización de la misma.
+
+Informe https://drive.google.com/file/d/10TcR1_ow3XDtCyEOxVgGNG3za3FYHiDI/view?usp=sharing
